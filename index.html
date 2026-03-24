@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>The Editorial Clinic | Nature & Estética</title>
+    <title>The Editorial Clinic | Estética &amp; Emagrecimento</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&amp;family=Montserrat:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     
     <!-- AOS Animation CSS -->
@@ -17,36 +17,60 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#4A5D4E", // Sage Green
-                        "on-primary": "#FFFFFF",
-                        "primary-container": "#DDE5DD",
-                        "on-primary-container": "#1B241D",
-                        "secondary": "#8D7B6D", // Earthy Brown/Taupe
-                        "on-secondary": "#FFFFFF",
-                        "secondary-container": "#F5F1EE", // Soft Sand
-                        "on-secondary-container": "#4B463D",
-                        "tertiary": "#6B705C", // Olive Sage
-                        "background": "#FDFCFB", // Off-White
-                        "surface": "#FDFCFB",
-                        "surface-variant": "#E8EAE6",
-                        "on-surface": "#2C302D",
-                        "on-surface-variant": "#5B615D",
-                        "outline": "#BCC2BC",
-                        "outline-variant": "#DCE1DC"
+                        "inverse-primary": "#ecbbba",
+                        "surface": "#faf9f6",
+                        "on-tertiary-container": "#593f00",
+                        "tertiary": "#775a19",
+                        "on-tertiary-fixed": "#261900",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#504444",
+                        "tertiary-container": "#d1ab63",
+                        "outline-variant": "#d4c2c2",
+                        "surface-tint": "#7b5455",
+                        "on-secondary-fixed": "#1e1b13",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "error": "#ba1a1a",
+                        "surface-container": "#efeeeb",
+                        "surface-container-high": "#e9e8e5",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-fixed-variant": "#603d3e",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "secondary-container": "#eae1d4",
+                        "inverse-surface": "#2f312f",
+                        "on-secondary-container": "#696459",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1a",
+                        "primary-fixed": "#ffdad9",
+                        "secondary": "#635e54",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e3e2e0",
+                        "surface-container-low": "#f4f3f1",
+                        "surface-bright": "#faf9f6",
+                        "primary-fixed-dim": "#ecbbba",
+                        "on-primary-container": "#5d3a3b",
+                        "outline": "#827473",
+                        "on-primary-fixed": "#2f1314",
+                        "on-background": "#1a1c1a",
+                        "surface-dim": "#dbdad7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#d4a5a5",
+                        "background": "#faf9f6",
+                        "inverse-on-surface": "#f2f1ee",
+                        "on-secondary-fixed-variant": "#4b463d",
+                        "primary": "#7b5455",
+                        "tertiary-fixed": "#ffdea5",
+                        "secondary-fixed": "#eae1d4",
+                        "secondary-fixed-dim": "#cdc6b9"
                     },
                     fontFamily: {
-                        "headline": ["Playfair Display", "serif"],
-                        "body": ["Montserrat", "sans-serif"],
-                        "label": ["Montserrat", "sans-serif"]
+                        "headline": ["Manrope"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
                     },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "2xl": "2rem",
-                        "3xl": "3rem",
-                        "full": "9999px"
-                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
                 },
             },
         }
@@ -55,59 +79,62 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        .ethereal-shadow {
-            box-shadow: 0 10px 30px 0 rgba(74, 93, 78, 0.08);
+        .editorial-shadow {
+            box-shadow: 0 12px 40px 0 rgba(26, 28, 26, 0.05);
         }
         .glass-header {
-            background-color: rgba(253, 252, 251, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
         body {
             min-height: max(884px, 100dvh);
             overflow-x: hidden;
         }
         
-        /* Smooth image zoom effect */
-        .img-zoom-container {
+        /* Smooth image zoom effect on hover for containers */
+        .zoom-wrap {
             overflow: hidden;
         }
-        .img-zoom-container img {
+        .zoom-wrap img {
             transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .img-zoom-container:hover img {
+        .zoom-wrap:hover img {
             transform: scale(1.05);
         }
 
-        /* Buttons smooth interaction */
-        .btn-sage {
+        /* Subtle button animations */
+        .btn-elegant {
             transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
-        .btn-sage:hover {
+        .btn-elegant:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px -10px rgba(74, 93, 78, 0.5);
+            box-shadow: 0 15px 30px -10px rgba(123, 84, 85, 0.4);
+        }
+        .btn-elegant:active {
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
 
     <!-- TopAppBar -->
-    <nav class="fixed top-0 w-full z-50 glass-header border-b border-outline-variant/30 transition-all duration-300" id="navbar">
-        <div class="flex justify-between items-center px-8 py-5 max-w-[1400px] mx-auto">
+    <nav class="fixed top-0 w-full z-50 glass-header shadow-sm shadow-rose-900/5 transition-all duration-300" id="navbar">
+        <div class="flex justify-between items-center px-8 py-4 max-w-[1400px] mx-auto">
             <div class="flex items-center gap-3 cursor-pointer">
                 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">spa</span>
-                <span class="text-lg font-medium tracking-[0.2em] uppercase text-primary">The Editorial Clinic</span>
+                <span class="text-lg font-light tracking-[0.2em] uppercase text-primary">The Editorial Clinic</span>
             </div>
             <div class="hidden md:flex gap-8 items-center">
-                <a class="text-primary border-b-2 border-primary/30 pb-1 font-label text-xs font-semibold tracking-widest uppercase transition-colors" href="#">Início</a>
-                <a class="text-on-surface-variant hover:text-primary font-label text-xs font-semibold tracking-widest uppercase transition-all duration-300" href="#sobre">Sobre</a>
-                <a class="text-on-surface-variant hover:text-primary font-label text-xs font-semibold tracking-widest uppercase transition-all duration-300" href="#especialista">Especialista</a>
-                <a class="text-on-surface-variant hover:text-primary font-label text-xs font-semibold tracking-widest uppercase transition-all duration-300" href="#tratamentos">Tratamentos</a>
-                <a class="text-on-surface-variant hover:text-primary font-label text-xs font-semibold tracking-widest uppercase transition-all duration-300" href="#resultados">Resultados</a>
-                <a class="bg-primary text-on-primary px-6 py-2.5 rounded-xl text-xs font-bold tracking-widest uppercase btn-sage" href="#contato">Agendar</a>
+                <a class="text-primary border-b-2 border-primary/30 pb-1 font-label text-sm tracking-wide" href="#">Início</a>
+                <a class="text-on-surface-variant hover:text-primary font-label text-sm tracking-wide transition-colors duration-300" href="#sobre">Sobre</a>
+                <a class="text-on-surface-variant hover:text-primary font-label text-sm tracking-wide transition-colors duration-300" href="#especialista">Especialista</a>
+                <a class="text-on-surface-variant hover:text-primary font-label text-sm tracking-wide transition-colors duration-300" href="#tratamentos">Tratamentos</a>
+                <a class="text-on-surface-variant hover:text-primary font-label text-sm tracking-wide transition-colors duration-300" href="#resultados">Resultados</a>
+                <a class="bg-primary text-on-primary px-6 py-2 rounded-full text-xs tracking-wider uppercase btn-elegant" href="#contato">Agendar</a>
             </div>
             <div class="md:hidden">
-                <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+                <span class="material-symbols-outlined text-primary">menu</span>
             </div>
         </div>
     </nav>
@@ -116,22 +143,22 @@
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent z-10"></div>
-                <!-- Natural/Earthy aesthetic image -->
-                <img class="w-full h-full object-cover object-center opacity-90" data-aos="zoom-out" data-aos-duration="2000" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2670&auto=format&fit=crop" alt="Spa with natural leaves elements" />
+                <div class="absolute inset-0 bg-gradient-to-tr from-surface via-surface/80 to-transparent z-10"></div>
+                <!-- High Quality Unsplash Image -->
+                <img class="w-full h-full object-cover object-center opacity-100 scale-105" data-aos="zoom-out" data-aos-duration="2000" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2670&auto=format&fit=crop" alt="Ambiente sofisticado de clínica estética" />
             </div>
             <div class="container mx-auto px-8 relative z-20">
                 <div class="max-w-2xl" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="inline-block text-tertiary font-label text-xs font-bold tracking-[0.3em] uppercase mb-6" data-aos="fade-up" data-aos-delay="200">Essência Natural</span>
-                    <h1 class="font-headline text-5xl md:text-7xl text-on-surface leading-[1.1] mb-8" data-aos="fade-up" data-aos-delay="400">
-                        Sua beleza elevada, <br/><span class="italic text-primary">sua natureza em foco</span>
+                    <span class="inline-block text-tertiary font-label text-xs tracking-[0.2em] uppercase mb-6" data-aos="fade-up" data-aos-delay="200">Excelência em Estética</span>
+                    <h1 class="font-headline font-light text-5xl md:text-7xl text-on-surface leading-tight tracking-tight mb-8" data-aos="fade-up" data-aos-delay="400">
+                        Transforme seu corpo, <br/><span class="italic font-normal text-primary">eleve sua autoestima</span>
                     </h1>
                     <p class="text-on-surface-variant text-lg md:text-xl font-light mb-10 leading-relaxed max-w-lg" data-aos="fade-up" data-aos-delay="600">
-                        Um refúgio de bem-estar. Tratamentos estéticos integrativos que respeitam o seu corpo e restauram o seu equilíbrio.
+                        Sua jornada para o bem-estar começa aqui com tratamentos exclusivos, tecnologia de ponta e um cuidado absolutamente personalizado.
                     </p>
                     <div class="flex flex-wrap gap-6" data-aos="fade-up" data-aos-delay="800">
-                        <a class="btn-sage bg-primary text-on-primary px-10 py-5 rounded-2xl font-medium ethereal-shadow flex items-center gap-3 group" href="#contato">
-                            Agende sua experiência
+                        <a class="btn-elegant bg-primary text-on-primary px-10 py-5 rounded-full font-medium flex items-center gap-3 group" href="#contato">
+                            Agende sua avaliação
                             <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </a>
                     </div>
@@ -140,34 +167,34 @@
         </section>
 
         <!-- Seção Sobre Nós -->
-        <section class="py-32 bg-secondary-container relative" id="sobre">
+        <section class="py-32 bg-surface-container-low relative" id="sobre">
             <div class="container mx-auto px-8">
                 <div class="flex flex-col md:flex-row items-center gap-20">
                     <div class="w-full md:w-1/2 relative" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="aspect-[4/5] rounded-[2rem] overflow-hidden ethereal-shadow border-8 border-white img-zoom-container">
-                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2070&auto=format&fit=crop" alt="Ambiente minimalista da clínica com elementos naturais" />
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow zoom-wrap">
+                            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" alt="Detalhe sutil de cuidado na clínica estética" />
                         </div>
-                        <div class="absolute -bottom-10 -right-10 hidden lg:block w-64 aspect-square bg-white rounded-3xl p-8 ethereal-shadow" data-aos="fade-up" data-aos-delay="300">
-                            <span class="text-primary text-5xl font-headline mb-2 block">10+</span>
-                            <p class="text-xs text-on-surface-variant font-semibold tracking-wider uppercase">Anos transformando vidas integrando ciência e natureza.</p>
+                        <div class="absolute -bottom-10 -right-10 hidden lg:block w-64 aspect-square bg-surface-container-lowest rounded-3xl p-8 editorial-shadow" data-aos="fade-up" data-aos-delay="300">
+                            <span class="text-tertiary text-4xl font-headline font-light mb-2 block">10+</span>
+                            <p class="text-sm text-on-surface-variant font-light">Anos de experiência transformando vidas através da estética avançada.</p>
                         </div>
                     </div>
                     <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
-                        <span class="text-tertiary font-label text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Nossa Filosofia</span>
-                        <h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-8 leading-tight">Cuidado que vai além do olhar</h2>
+                        <span class="text-tertiary font-label text-xs tracking-[0.2em] uppercase mb-4 block">Nossa Essência</span>
+                        <h2 class="font-headline font-light text-4xl md:text-5xl text-on-surface mb-8 leading-tight">Cuidado que vai além da superfície</h2>
                         <div class="space-y-6 text-on-surface-variant leading-relaxed font-light text-lg">
-                            <p>A The Editorial Clinic nasceu da compreensão de que a verdadeira estética reflete a saúde interna. Nossa jornada é desenhada para acolher as suas individualidades, entregando uma renovação profunda e sustentável.</p>
-                            <p class="font-medium text-primary border-l-2 border-primary pl-6 py-2 italic bg-primary/5">
-                                "Nossa missão é promover autoestima através da fusão perfeita entre alta tecnologia e o toque acolhedor humano."
+                            <p>A The Editorial Clinic nasceu da visão de que a beleza e a saúde devem caminhar em harmonia. Nossa história é construída sobre o compromisso de oferecer não apenas resultados reais, mas uma experiência de renovação total e relaxamento profundo.</p>
+                            <p class="font-medium text-primary bg-primary-container/10 p-4 rounded-2xl border border-primary/10">
+                                Missão: “Promover saúde, bem-estar e autoestima através de tecnologia de ponta e cuidado humanizado”.
                             </p>
-                            <div class="pt-8 grid grid-cols-2 gap-8 border-t border-outline-variant/50">
+                            <div class="pt-8 grid grid-cols-2 gap-8 border-t border-outline-variant/30">
                                 <div>
-                                    <h4 class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Valores</h4>
-                                    <p class="text-sm font-normal">Transparência clínica, inovação regenerativa e absoluto respeito ao seu tempo.</p>
+                                    <h4 class="text-on-surface font-medium mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-lg">diamond</span> Valores</h4>
+                                    <p class="text-sm">Transparência, inovação constante e profundo respeito à individualidade de cada paciente.</p>
                                 </div>
                                 <div>
-                                    <h4 class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Padrão Ouro</h4>
-                                    <p class="text-sm font-normal">Equipamentos premium testados e certificados globalmente para sua segurança.</p>
+                                    <h4 class="text-on-surface font-medium mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-lg">science</span> Tecnologia</h4>
+                                    <p class="text-sm">Equipamentos de última geração aprovados pelos órgãos mais rigorosos de saúde do mundo.</p>
                                 </div>
                             </div>
                         </div>
@@ -176,26 +203,30 @@
             </div>
         </section>
 
-        <!-- Seção Especialista (NEW - Earthy Theme) -->
-        <section class="py-32 bg-background" id="especialista">
+        <!-- Seção Especialista (NEW) -->
+        <section class="py-32 bg-surface" id="especialista">
             <div class="container mx-auto px-8 max-w-[1200px]">
                 <div class="flex flex-col md:flex-row-reverse items-center gap-20">
                     <div class="w-full md:w-1/2 relative" data-aos="fade-left" data-aos-duration="1000">
-                        <div class="aspect-[4/5] rounded-tl-full rounded-tr-3xl rounded-b-[2rem] overflow-hidden ethereal-shadow border-8 border-secondary-container img-zoom-container">
-                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2070&auto=format&fit=crop" alt="Dra. Isabella Diniz" class="w-full h-full object-cover">
+                        <div class="aspect-[3/4] rounded-t-full rounded-b-3xl overflow-hidden editorial-shadow zoom-wrap border-8 border-surface-container-low">
+                            <!-- Premium portrait image -->
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" alt="Dra. Especialista da Clínica" class="w-full h-full object-cover">
                         </div>
-                        <div class="absolute -top-8 -right-8 w-32 h-32 bg-secondary/10 rounded-full blur-2xl"></div>
+                        <!-- Decorative element -->
+                        <div class="absolute top-1/2 -right-6 w-12 h-12 bg-primary rounded-full blur-2xl opacity-40"></div>
                     </div>
                     <div class="w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
-                        <span class="text-tertiary font-label text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Diretoria Clínica</span>
-                        <h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-8">Dra. Isabella Diniz</h2>
+                        <span class="text-tertiary font-label text-xs tracking-[0.2em] uppercase mb-4 block">Diretora Clínica</span>
+                        <h2 class="font-headline font-light text-4xl md:text-5xl text-on-surface mb-8">Dra. Helena Mendes</h2>
                         <div class="space-y-6 text-on-surface-variant leading-relaxed font-light text-lg">
-                            <p>Especialista em estética natural e terapias integrativas. A Dra. Isabella possui mais de 8 anos de experiência unindo a eficácia científica com uma abordagem orgânica, entregando resultados extremamente harmoniosos e elegantes.</p>
-                            <p>Ela acredita que menos é mais. Com dezenas de certificações internacionais, seu protocolo exclusivo prioriza a saúde da pele de dentro para fora, devolvendo o seu viço natural sem exageros.</p>
-                            <div class="pt-6 border-b border-outline-variant/30 pb-6">
-                                <p class="font-bold text-primary text-xs tracking-widest uppercase">CRBM 88990 • Esteta Integrativa</p>
+                            <p>Com vasta experiência em estética avançada e harmonização corporal, a Dra. Helena acredita que cada corpo é único e merece um planejamento exclusivo. Sua abordagem clínica foge dos padrões engessados, focando em resultados elegantes e naturais que realçam a sua verdadeira essência.</p>
+                            <p>Formada pelas melhores instituições e com Masterclass internacionais, ela traz para a <em>The Editorial Clinic</em> os protocolos mundiais mais modernos e seguros.</p>
+                            <div class="pt-6">
+                                <p class="font-medium text-primary text-sm tracking-widest uppercase">CRBM 12345 • Esteta Especialista</p>
                             </div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Signature_of_Alexandre_Dumas_fils.svg" alt="Assinatura" class="h-10 opacity-60 mix-blend-multiply filter blur-[0.2px]" style="filter: invert(34%) sepia(8%) saturate(1472%) hue-rotate(85deg) brightness(38%) contrast(85%);" />
+                            <div class="pt-8">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Signature_of_Alexandre_Dumas_fils.svg" alt="Assinatura" class="h-12 opacity-40 mix-blend-multiply filter blur-[0.3px]" style="filter: invert(34%) sepia(16%) saturate(1472%) hue-rotate(313deg) brightness(88%) contrast(85%);" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,46 +234,46 @@
         </section>
 
         <!-- Seção Tratamentos -->
-        <section class="py-32 bg-surface" id="tratamentos">
+        <section class="py-32 bg-surface-container-low" id="tratamentos">
             <div class="container mx-auto px-8">
                 <div class="text-center mb-24" data-aos="fade-up">
-                    <span class="text-tertiary font-label text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Portfólio de Cuidados</span>
-                    <h2 class="font-headline text-4xl md:text-5xl text-on-surface">Terapias Exclusivas</h2>
-                    <div class="h-0.5 w-16 bg-primary mx-auto mt-8 opacity-40"></div>
+                    <span class="text-tertiary font-label text-xs tracking-[0.2em] uppercase mb-4 block">Especialidades</span>
+                    <h2 class="font-headline font-light text-4xl md:text-5xl text-on-surface">Protocolos Exclusivos</h2>
+                    <div class="h-1 w-12 bg-primary mx-auto mt-8 opacity-50 rounded-full"></div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <!-- Card 1 -->
-                    <div class="bg-white p-12 rounded-3xl ethereal-shadow transition-all duration-500 hover:-translate-y-3 hover:shadow-xl hover:shadow-primary/10 border border-outline-variant/30 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-16 h-16 bg-primary-container/60 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500">
-                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl transition-colors">spa</span>
+                    <div class="bg-surface-container-lowest p-10 rounded-[2.5rem] editorial-shadow transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500 shadow-sm">
+                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl transition-colors">water_drop</span>
                         </div>
-                        <h3 class="font-headline text-2xl mb-4 text-on-surface">Drenagem Detox Orgânica</h3>
-                        <p class="text-on-surface-variant font-light leading-relaxed mb-10">Um método que combina manobras suaves e óleos essenciais para estimular o sistema linfático, reduzindo o inchaço e promovendo alívio profundo.</p>
-                        <a class="text-primary font-bold flex items-center gap-2 text-[11px] uppercase tracking-widest hover:gap-3 transition-all" href="#">
-                            Descubra <span class="material-symbols-outlined text-sm">east</span>
+                        <h3 class="font-headline text-2xl font-light mb-4 text-on-surface">Drenagem Linfática Método Exclusivo</h3>
+                        <p class="text-on-surface-variant font-light leading-relaxed mb-8">Eliminação progressiva de toxinas e redução de inchaço através de manobras precisas, rítmicas e profundamente relaxantes.</p>
+                        <a class="text-tertiary font-medium flex items-center gap-2 text-sm group-hover:text-primary transition-colors" href="#">
+                            Saiba mais <span class="material-symbols-outlined text-sm transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
                         </a>
                     </div>
                     <!-- Card 2 -->
-                    <div class="bg-white p-12 rounded-3xl ethereal-shadow transition-all duration-500 hover:-translate-y-3 hover:shadow-xl hover:shadow-primary/10 border border-outline-variant/30 group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-16 h-16 bg-primary-container/60 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500">
-                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl transition-colors">diamond</span>
+                    <div class="bg-surface-container-lowest p-10 rounded-[2.5rem] editorial-shadow transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500 shadow-sm">
+                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl transition-colors">ac_unit</span>
                         </div>
-                        <h3 class="font-headline text-2xl mb-4 text-on-surface">Bioestimuladores de Colágeno</h3>
-                        <p class="text-on-surface-variant font-light leading-relaxed mb-10">Tratamento focado na firmeza da pele. Estimulamos a produção natural do seu colágeno para atenuar a flacidez com elegância e viço.</p>
-                        <a class="text-primary font-bold flex items-center gap-2 text-[11px] uppercase tracking-widest hover:gap-3 transition-all" href="#">
-                            Descubra <span class="material-symbols-outlined text-sm">east</span>
+                        <h3 class="font-headline text-2xl font-light mb-4 text-on-surface">Criolipólise Avançada 360º</h3>
+                        <p class="text-on-surface-variant font-light leading-relaxed mb-8">Tecnologia de ponta europeia para redução definitiva da gordura localizada através do resfriamento controlado e inteligente.</p>
+                        <a class="text-tertiary font-medium flex items-center gap-2 text-sm group-hover:text-primary transition-colors" href="#">
+                            Saiba mais <span class="material-symbols-outlined text-sm transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
                         </a>
                     </div>
                     <!-- Card 3 -->
-                    <div class="bg-white p-12 rounded-3xl ethereal-shadow transition-all duration-500 hover:-translate-y-3 hover:shadow-xl hover:shadow-primary/10 border border-outline-variant/30 group cursor-pointer" data-aos="fade-up" data-aos-delay="500">
-                        <div class="w-16 h-16 bg-primary-container/60 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500">
-                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl transition-colors">self_improvement</span>
+                    <div class="bg-surface-container-lowest p-10 rounded-[2.5rem] editorial-shadow transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl group cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+                        <div class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500 shadow-sm">
+                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl transition-colors">spa</span>
                         </div>
-                        <h3 class="font-headline text-2xl mb-4 text-on-surface">Nutrição Integrativa</h3>
-                        <p class="text-on-surface-variant font-light leading-relaxed mb-10">Reequilibre seu corpo de forma sistêmica. Um mapeamento nutricional focado na longevidade celular e no seu bem-estar diário.</p>
-                        <a class="text-primary font-bold flex items-center gap-2 text-[11px] uppercase tracking-widest hover:gap-3 transition-all" href="#">
-                            Descubra <span class="material-symbols-outlined text-sm">east</span>
+                        <h3 class="font-headline text-2xl font-light mb-4 text-on-surface">Bioestimuladores Corporais</h3>
+                        <p class="text-on-surface-variant font-light leading-relaxed mb-8">Tratamento premium para flacidez e celulite, estimulando intensamente a produção do seu próprio colágeno de forma natural.</p>
+                        <a class="text-tertiary font-medium flex items-center gap-2 text-sm group-hover:text-primary transition-colors" href="#">
+                            Saiba mais <span class="material-symbols-outlined text-sm transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
                         </a>
                     </div>
                 </div>
@@ -250,59 +281,59 @@
         </section>
 
         <!-- Seção Histórias de Sucesso -->
-        <section class="py-32 bg-secondary-container/60" id="resultados">
+        <section class="py-32 bg-surface" id="resultados">
             <div class="container mx-auto px-8">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8" data-aos="fade-in">
                     <div class="max-w-xl">
-                        <span class="text-tertiary font-label text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Comunidade Editorial</span>
-                        <h2 class="font-headline text-4xl md:text-5xl text-on-surface">Vozes que inspiram</h2>
+                        <span class="text-tertiary font-label text-xs tracking-[0.2em] uppercase mb-4 block">Experiências Reais</span>
+                        <h2 class="font-headline font-light text-4xl md:text-5xl text-on-surface">Histórias que inspiram</h2>
                     </div>
                 </div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <!-- Depoimento 1 -->
-                    <div class="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden ethereal-shadow border border-outline-variant/20 transition-transform hover:scale-[1.02] duration-500" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-full md:w-2/5 relative img-zoom-container">
-                            <img class="w-full h-full object-cover aspect-square md:aspect-auto" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" alt="Paciente relaxada após tratamento"/>
-                            <div class="absolute bottom-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-lg text-[10px] uppercase tracking-widest font-bold shadow-lg">Protocolo Facial</div>
+                    <div class="flex flex-col md:flex-row bg-surface-container-lowest rounded-[3rem] overflow-hidden editorial-shadow transition-transform hover:scale-[1.02] duration-500" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-full md:w-2/5 relative zoom-wrap">
+                            <img class="w-full h-full object-cover aspect-square md:aspect-auto" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop" alt="Resultado sutil estético"/>
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold text-primary shadow-lg border border-white/20">Protocolo Corporal</div>
                         </div>
-                        <div class="w-full md:w-3/5 p-12 flex flex-col justify-center relative">
-                            <span class="material-symbols-outlined text-primary/10 text-7xl absolute top-6 right-8">format_quote</span>
-                            <div class="flex gap-1 mb-6 relative z-10">
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <div class="w-full md:w-3/5 p-10 flex flex-col justify-center relative">
+                            <span class="material-symbols-outlined text-primary/20 text-6xl absolute top-6 right-8">format_quote</span>
+                            <div class="flex gap-1 mb-6">
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
                             </div>
-                            <p class="text-on-surface-variant font-light italic text-lg leading-relaxed mb-8 relative z-10">
-                                "Senti uma melhora não apenas na minha pele, mas na minha energia e na vontade de me cuidar. O ambiente traz uma paz indescritível, a atenção da equipe é notável."
+                            <p class="text-on-surface-variant font-light italic text-lg leading-relaxed mb-6 block relative z-10">
+                                "Recuperei não apenas os contornos do meu corpo, mas minha vontade de me olhar e me admirar no espelho. O atendimento da clínica é impecável, focado em mim."
                             </p>
-                            <h4 class="font-headline text-xl text-on-surface">Elena M.</h4>
-                            <span class="text-[10px] text-tertiary font-bold tracking-[0.2em] uppercase mt-2">Drenagem & Nutrição</span>
+                            <h4 class="font-headline text-lg font-medium text-on-surface">Mariana S.</h4>
+                            <span class="text-xs text-tertiary font-label tracking-widest uppercase mt-1">Transformação em 3 meses</span>
                         </div>
                     </div>
                     
                     <!-- Depoimento 2 -->
-                    <div class="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden ethereal-shadow border border-outline-variant/20 transition-transform hover:scale-[1.02] duration-500" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-full md:w-2/5 relative img-zoom-container">
-                            <img class="w-full h-full object-cover aspect-square md:aspect-auto" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" alt="Cuidados estéticos com foco orgânico"/>
-                            <div class="absolute bottom-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-lg text-[10px] uppercase tracking-widest font-bold shadow-lg">Revitalização</div>
+                    <div class="flex flex-col md:flex-row bg-surface-container-lowest rounded-[3rem] overflow-hidden editorial-shadow transition-transform hover:scale-[1.02] duration-500" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-full md:w-2/5 relative zoom-wrap">
+                            <img class="w-full h-full object-cover aspect-square md:aspect-auto" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop" alt="Paciente relaxando e feliz"/>
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold text-primary shadow-lg border border-white/20">Criolipólise</div>
                         </div>
-                        <div class="w-full md:w-3/5 p-12 flex flex-col justify-center relative">
-                            <span class="material-symbols-outlined text-primary/10 text-7xl absolute top-6 right-8">format_quote</span>
-                            <div class="flex gap-1 mb-6 relative z-10">
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <div class="w-full md:w-3/5 p-10 flex flex-col justify-center relative">
+                            <span class="material-symbols-outlined text-primary/20 text-6xl absolute top-6 right-8">format_quote</span>
+                            <div class="flex gap-1 mb-6">
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
                             </div>
-                            <p class="text-on-surface-variant font-light italic text-lg leading-relaxed mb-8 relative z-10">
-                                "Os bioestimuladores devolveram a firmeza do meu rosto de forma tão natural que as pessoas perguntam se eu apenas descansei bastante na praia. Amei."
+                            <p class="text-on-surface-variant font-light italic text-lg leading-relaxed mb-6 block relative z-10">
+                                "A tecnologia que utilizam faz toda a diferença. O ambiente é um luxo, super silencioso e aconchegante. Meus resultados de Criolipólise foram incríveis."
                             </p>
-                            <h4 class="font-headline text-xl text-on-surface">Carla T.</h4>
-                            <span class="text-[10px] text-tertiary font-bold tracking-[0.2em] uppercase mt-2">Bioestimulador Facial</span>
+                            <h4 class="font-headline text-lg font-medium text-on-surface">Fernanda L.</h4>
+                            <span class="text-xs text-tertiary font-label tracking-widest uppercase mt-1">Transformação em 2 sessões</span>
                         </div>
                     </div>
                 </div>
@@ -310,24 +341,24 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-32 bg-surface" id="contato">
+        <section class="py-32 bg-surface-container-low" id="contato">
             <div class="container mx-auto px-8 max-w-[1200px]">
-                <div class="bg-primary rounded-3xl p-12 md:p-24 text-center relative overflow-hidden ethereal-shadow" data-aos="zoom-in">
-                    <!-- Decorate Circles for Sage Green Theme -->
-                    <div class="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-                    <div class="absolute bottom-0 left-0 w-80 h-80 bg-tertiary/20 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+                <div class="bg-primary-fixed rounded-[4rem] p-12 md:p-24 text-center relative overflow-hidden editorial-shadow" data-aos="zoom-in">
+                    <!-- Decorate Circles -->
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-white/50 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/40 rounded-full -ml-48 -mb-48 blur-3xl"></div>
                     
                     <div class="relative z-10 max-w-3xl mx-auto">
-                        <span class="material-symbols-outlined text-on-primary opacity-60 text-5xl mb-6">spa</span>
-                        <h2 class="font-headline text-4xl md:text-5xl text-on-primary mb-8 leading-tight">
-                            Pronta para começar sua renovação? <br/><span class="italic font-normal">Sua avaliação aguarda.</span>
+                        <span class="material-symbols-outlined text-primary text-5xl mb-6">diamond</span>
+                        <h2 class="font-headline font-light text-4xl md:text-5xl text-on-primary-container mb-8 leading-tight">
+                            Sua jornada para a sua <br/><span class="font-medium">melhor versão</span> começa aqui.
                         </h2>
-                        <p class="text-on-primary/80 text-lg font-light mb-12">
-                            Agende uma consultoria para mapearmos as necessidades autênticas da sua pele e desenhar uma jornada estética sob medida.
+                        <p class="text-on-primary-fixed-variant text-lg font-light mb-12 max-w-xl mx-auto">
+                            Reserve um horário exclusivo para uma avaliação completa. Vamos entender as necessidades do seu corpo e desenhar um protocolo só para você.
                         </p>
-                        <a class="inline-flex items-center gap-4 bg-white text-primary px-12 py-6 rounded-2xl font-bold tracking-widest text-[11px] uppercase hover:scale-[1.03] shadow-xl hover:shadow-white/20 transition-all group" href="#">
+                        <a class="btn-elegant inline-flex items-center gap-4 bg-primary text-on-primary px-12 py-6 rounded-full font-medium shadow-xl shadow-primary/30 group" href="#">
                             <span class="material-symbols-outlined group-hover:animate-pulse">chat</span>
-                            Falar com nossa triagem
+                            Agendar Avaliação pelo WhatsApp
                         </a>
                     </div>
                 </div>
@@ -336,53 +367,53 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full bg-[#1b241d] py-24 px-12 grid grid-cols-1 md:grid-cols-4 gap-12 text-[#bcc2bc] font-label text-sm">
+    <footer class="w-full rounded-t-[3rem] mt-24 bg-[#1a1c1a] text-white py-20 px-12 grid grid-cols-1 md:grid-cols-4 gap-12 font-label text-sm tracking-wide">
         <div class="space-y-6 md:pr-8">
-            <span class="text-xl font-medium tracking-[0.2em] uppercase text-white block flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 0;">spa</span>
+            <span class="text-xl font-light tracking-widest text-primary-container block flex items-center gap-2">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">spa</span>
                 The Editorial
             </span>
-            <p class="font-light leading-relaxed">A Sanctuary of Wellness. Dedicados à excelência estética e ao cuidado humanizado em um ambiente orgânico e sereno.</p>
+            <p class="font-light leading-relaxed text-zinc-400">A Sanctuary of Wellness. Dedicados à excelência estética, alta tecnologia e ao cuidado humanizado em cada visita.</p>
         </div>
         
         <div class="space-y-4">
-            <h5 class="text-primary-container font-bold uppercase text-xs tracking-[0.3em] mb-6">Menu</h5>
-            <ul class="space-y-4 font-normal">
-                <li><a class="hover:text-white transition-colors" href="#">Início</a></li>
-                <li><a class="hover:text-white transition-colors" href="#sobre">Sobre Nós</a></li>
-                <li><a class="hover:text-white transition-colors" href="#especialista">A Especialista</a></li>
-                <li><a class="hover:text-white transition-colors" href="#tratamentos">Tratamentos</a></li>
+            <h5 class="text-primary-container font-medium uppercase text-xs tracking-[0.2em] mb-6">Navegação</h5>
+            <ul class="space-y-3 text-zinc-400">
+                <li><a class="hover:text-white hover:translate-x-1 inline-block transition-all" href="#">Início</a></li>
+                <li><a class="hover:text-white hover:translate-x-1 inline-block transition-all" href="#sobre">Sobre Nós</a></li>
+                <li><a class="hover:text-white hover:translate-x-1 inline-block transition-all" href="#especialista">Especialista</a></li>
+                <li><a class="hover:text-white hover:translate-x-1 inline-block transition-all" href="#tratamentos">Tratamentos</a></li>
             </ul>
         </div>
         
         <div class="space-y-4">
-            <h5 class="text-primary-container font-bold uppercase text-xs tracking-[0.3em] mb-6">Contato</h5>
-            <ul class="space-y-4 font-normal">
+            <h5 class="text-primary-container font-medium uppercase text-xs tracking-[0.2em] mb-6">Contato</h5>
+            <ul class="space-y-3 text-zinc-400">
                 <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary-container">mail</span> contato@editorialclinic.com</li>
                 <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary-container">call</span> (11) 99999-9999</li>
-                <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary-container">location_on</span> Jardins, São Paulo - SP</li>
+                <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-primary-container">location_on</span> Av. Europa, 123 - Jardins, São Paulo</li>
             </ul>
         </div>
         
         <div class="space-y-4">
-            <h5 class="text-primary-container font-bold uppercase text-xs tracking-[0.3em] mb-6">Redes Sociais</h5>
+            <h5 class="text-primary-container font-medium uppercase text-xs tracking-[0.2em] mb-6">Redes Sociais</h5>
             <div class="flex gap-4">
-                <a class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-colors text-white" href="#">
+                <a class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
                     <span class="material-symbols-outlined text-lg">camera</span>
                 </a>
-                <a class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-colors text-white" href="#">
+                <a class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
                     <span class="material-symbols-outlined text-lg">social_leaderboard</span>
                 </a>
             </div>
-            <p class="text-[10px] font-bold tracking-widest uppercase mt-10 opacity-60">© 2024 The Editorial Clinic.<br/>All Rights Reserved.</p>
+            <p class="text-xs mt-10 text-zinc-600">© 2024 The Editorial Clinic.<br/>Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a class="btn-sage fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-2xl flex items-center justify-center hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#25D366]/40 transition-all duration-300 group" href="#">
+    <a class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:-translate-y-2 hover:shadow-[#25D366]/40 transition-all duration-300 group btn-elegant" href="#">
         <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
-        <span class="absolute right-full mr-4 bg-surface text-on-surface px-4 py-2 rounded-xl ethereal-shadow opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap text-xs font-bold tracking-widest uppercase border border-outline-variant/30">
-            Fale com nossa triagem
+        <span class="absolute right-full mr-4 bg-surface text-on-surface px-4 py-2 rounded-xl popup-shadow opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap text-sm font-medium border border-outline-variant/30">
+            Fale com nossa equipe
         </span>
     </a>
 
@@ -396,15 +427,15 @@
             offset: 50
         });
 
-        // Add visual hierarchy to navbar on scroll
+        // Add blur to navbar on scroll
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                navbar.classList.add('shadow-md', 'bg-surface/95');
-                navbar.classList.remove('bg-surface/85', 'border-b');
+                navbar.classList.add('shadow-md', 'bg-white/90');
+                navbar.classList.remove('bg-white/70');
             } else {
-                navbar.classList.remove('shadow-md', 'bg-surface/95');
-                navbar.classList.add('bg-surface/85', 'border-b');
+                navbar.classList.remove('shadow-md', 'bg-white/90');
+                navbar.classList.add('bg-white/70');
             }
         });
     </script>
